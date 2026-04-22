@@ -29,3 +29,16 @@ def remover_dado(dados_rolados, dados_guardados, indice):
     lista_retorno[1].pop(indice)
 
     return lista_retorno
+
+def calcula_pontos_regra_simples(dados_rolados):
+    dic_retorno = {1: 0, 
+                   2: 0, 
+                   3: 0, 
+                   4: 0, 
+                   5: 0, 
+                   6: 0}
+
+    for num in dados_rolados:
+        dic_retorno[num] = dados_rolados.count(num) * num
+    
+    return dic_retorno
