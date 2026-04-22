@@ -7,3 +7,14 @@ def rolar_dados(quantidade):
         lista_dados.append(randint(1, 6))
     
     return lista_dados
+
+def guardar_dado(dados_rolados, dados_guardados, indice):
+    lista_retorno = []
+
+    lista_retorno.append(dados_rolados)
+    lista_retorno.append(dados_guardados)
+
+    lista_retorno[1].append(lista_retorno[0][indice])
+    lista_retorno[0].pop(indice)
+
+    return lista_retorno
