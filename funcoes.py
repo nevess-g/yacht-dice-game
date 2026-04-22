@@ -42,3 +42,11 @@ def calcula_pontos_regra_simples(dados_rolados):
         dic_retorno[num] = dados_rolados.count(num) * num
     
     return dic_retorno
+
+def calcula_pontos_soma(dados_rolados):
+    soma = 0
+
+    for num in dados_rolados:
+        soma += num
+
+    return soma
