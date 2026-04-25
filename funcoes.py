@@ -70,3 +70,17 @@ def calcula_pontos_sequencia_alta(dados_rolados):
             break
     
     return seq_alta
+
+def calcula_pontos_full_house(dados_rolados):
+    full_house = 0
+    qtd_restricao = 0
+
+    for dado in dados_rolados:
+        if dados_rolados.count(dado) == 3 or dados_rolados.count(dado) == 2:
+            full_house += dado
+            qtd_restricao += 1
+    
+    if qtd_restricao != 5:
+        return 0    
+    else:
+        return full_house
