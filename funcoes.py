@@ -95,3 +95,9 @@ def calcula_pontos_quadra(dados_rolados):
             break
 
     return soma
+
+def calcula_pontos_quina(dados_rolados):
+    for dado in dados_rolados:
+        if dados_rolados.count(dado) >= 5:
+            return 50
+    return 0
