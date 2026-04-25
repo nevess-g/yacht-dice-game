@@ -60,3 +60,13 @@ def calcula_pontos_sequencia_baixa(dados_rolados):
             break
     
     return seq_baixa
+
+def calcula_pontos_sequencia_alta(dados_rolados):
+    seq_alta = 0
+
+    for dado in dados_rolados:
+        if dado + 1 in dados_rolados and dado + 2 in dados_rolados and dado + 3 in dados_rolados and dado + 4 in dados_rolados:
+            seq_alta = 30
+            break
+    
+    return seq_alta
