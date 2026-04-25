@@ -84,3 +84,14 @@ def calcula_pontos_full_house(dados_rolados):
         return 0    
     else:
         return full_house
+
+def calcula_pontos_quadra(dados_rolados):
+    soma = 0
+
+    for dado in dados_rolados:
+        if dados_rolados.count(dado) >= 4:
+            for dado in dados_rolados:
+                soma += dado
+            break
+
+    return soma
