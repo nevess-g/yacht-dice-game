@@ -113,3 +113,14 @@ def calcula_pontos_regra_avancada(dados_rolados):
     }
 
     return dic_pontos
+
+def faz_jogada(dados_rolados, categoria, cartela):
+    if categoria.isnumeric():
+        simples = calcula_pontos_regra_simples(dados_rolados)
+        cartela['regra_simples'][int(categoria)] = simples[int(categoria)]
+    else:
+        avancada = calcula_pontos_regra_avancada(dados_rolados)
+        cartela['regra_avancada'][categoria] = avancada[categoria]
+    
+    return cartela
+        
